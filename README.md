@@ -73,7 +73,7 @@ echo "kubectl exec -it << pod-name >> -- /bin/bash"
 In out case
 
 ```
-echo "kubectl exec -it mypod -- /bin/bash"
+kubectl exec -it mypod -- /bin/bash
 ```
 Now you can check and store the data as well.
 
