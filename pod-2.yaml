@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod2
+spec:
+  containers:
+  - name: mycontainer2
+    image: nginx:latest
+    volumeMounts:
+    - mountPath: /workdir
+      name: nfs
+  volumes:
+  - name: nfs
+    persistentVolumeClaim:
+      claimName: nfs
+      readOnly: false
